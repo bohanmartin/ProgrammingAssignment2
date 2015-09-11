@@ -5,10 +5,6 @@
 ## This is meant to save the time that would have been used by
 ## repeating this potentially long calculation.
 
-
-## makeCacheMatrix creates the matrix object that can cache its 
-## inverse.
-
 makeCacheMatrix <- function(x = numeric()) {
         s <- NULL
         set <- function(y) {
@@ -20,7 +16,6 @@ makeCacheMatrix <- function(x = numeric()) {
         getinverse <- function() s
         list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
-
 
 ## cacheSolve is a function that either calculates the inverse of the
 ## matrix entered in makeCacheMatrix, or, if the inverse of that
